@@ -6,7 +6,7 @@
 //
 import Foundation
 
-struct Promocode: Decodable {
+struct Promocode: Decodable, Equatable {
     let promocode: String
 }
 

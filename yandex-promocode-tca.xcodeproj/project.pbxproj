@@ -8,20 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		09B5E704292A9CF3C7ADAF0D /* PinLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA64A209046E2B6B4A7D5CA /* PinLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1537608F2D771FD1005FC83C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1537608E2D771FD1005FC83C /* AppDelegate.swift */; };
-		153760912D7753F3005FC83C /* PromocodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153760902D7753EC005FC83C /* PromocodeService.swift */; };
+		158E346F2D78307B00A3873E /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158E346E2D78307800A3873E /* Reducer.swift */; };
+		158E34712D785F2C00A3873E /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158E34702D785F2800A3873E /* Environment.swift */; };
+		158E34732D786C5400A3873E /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158E34722D786C5300A3873E /* State.swift */; };
+		158E34752D786C6700A3873E /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158E34742D786C6500A3873E /* Action.swift */; };
+		7742AD954658F081F0E43A07 /* swift-sharing_Sharing.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = B49558D4D4829E4914DCFD21 /* swift-sharing_Sharing.bundle */; };
 		7B4C85A78F82CA44751082EB /* PinLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA64A209046E2B6B4A7D5CA /* PinLayout.framework */; };
+		80F56378D19C0E7411A7E55B /* ComposableArchitecture.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F15A990042251BD66D8F0D00 /* ComposableArchitecture.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		89C7D251C352365369BB231A /* ComposableArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F15A990042251BD66D8F0D00 /* ComposableArchitecture.framework */; };
 		A2DFA28A7B6F8697EF48648A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BCD7C5BF470CCE9ADD7528 /* SceneDelegate.swift */; };
-		CA337928F0BF3480BB2AA498 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776D5BA73CF56DB1EB4BA027 /* ViewController.swift */; };
+		CA337928F0BF3480BB2AA498 /* PromocodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776D5BA73CF56DB1EB4BA027 /* PromocodesViewController.swift */; };
+		CDF789C87B35A5FDEF4982E7 /* swift-sharing_Sharing.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B49558D4D4829E4914DCFD21 /* swift-sharing_Sharing.bundle */; };
+		D47EDD4408BA702643457376 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CFCB869FC9464CDB4FC484 /* AppDelegate.swift */; };
+		F776E5FCB5864E5BEC4DC056 /* PromocodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A10A41589DA4116243BDD1 /* PromocodeService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		556FDB7A96C8CED00DE2C5A3 /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				7742AD954658F081F0E43A07 /* swift-sharing_Sharing.bundle in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		AF11AE9967D461157F06A3D6 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				80F56378D19C0E7411A7E55B /* ComposableArchitecture.framework in Embed Frameworks */,
 				09B5E704292A9CF3C7ADAF0D /* PinLayout.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -30,13 +49,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1537608E2D771FD1005FC83C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		153760902D7753EC005FC83C /* PromocodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromocodeService.swift; sourceTree = "<group>"; };
+		158E346E2D78307800A3873E /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
+		158E34702D785F2800A3873E /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		158E34722D786C5300A3873E /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		158E34742D786C6500A3873E /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		27A10A41589DA4116243BDD1 /* PromocodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromocodeService.swift; sourceTree = "<group>"; };
 		53BCD7C5BF470CCE9ADD7528 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5AA64A209046E2B6B4A7D5CA /* PinLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PinLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		776D5BA73CF56DB1EB4BA027 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		776D5BA73CF56DB1EB4BA027 /* PromocodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromocodesViewController.swift; sourceTree = "<group>"; };
+		B49558D4D4829E4914DCFD21 /* swift-sharing_Sharing.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-sharing_Sharing.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C250D72B4F73C5D4687E28E2 /* yandex_promocode_tca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yandex_promocode_tca.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7CFCB869FC9464CDB4FC484 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4F9949D5271BC2076293C8D /* yandex-promocode-tca-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "yandex-promocode-tca-Info.plist"; sourceTree = "<group>"; };
+		F15A990042251BD66D8F0D00 /* ComposableArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ComposableArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89C7D251C352365369BB231A /* ComposableArchitecture.framework in Frameworks */,
 				7B4C85A78F82CA44751082EB /* PinLayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,13 +77,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		158E346D2D782D3B00A3873E /* Promocode */ = {
+			isa = PBXGroup;
+			children = (
+				158E34742D786C6500A3873E /* Action.swift */,
+				158E34722D786C5300A3873E /* State.swift */,
+				158E34702D785F2800A3873E /* Environment.swift */,
+				158E346E2D78307800A3873E /* Reducer.swift */,
+				27A10A41589DA4116243BDD1 /* PromocodeService.swift */,
+				776D5BA73CF56DB1EB4BA027 /* PromocodesViewController.swift */,
+			);
+			path = Promocode;
+			sourceTree = "<group>";
+		};
 		542A889110B79EEBA60167AE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				153760902D7753EC005FC83C /* PromocodeService.swift */,
-				1537608E2D771FD1005FC83C /* AppDelegate.swift */,
+				158E346D2D782D3B00A3873E /* Promocode */,
+				C7CFCB869FC9464CDB4FC484 /* AppDelegate.swift */,
 				53BCD7C5BF470CCE9ADD7528 /* SceneDelegate.swift */,
-				776D5BA73CF56DB1EB4BA027 /* ViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -90,7 +128,9 @@
 		C8EEFA356128D66EC1367AC7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				F15A990042251BD66D8F0D00 /* ComposableArchitecture.framework */,
 				5AA64A209046E2B6B4A7D5CA /* PinLayout.framework */,
+				B49558D4D4829E4914DCFD21 /* swift-sharing_Sharing.bundle */,
 				C250D72B4F73C5D4687E28E2 /* yandex_promocode_tca.app */,
 			);
 			name = Products;
@@ -105,14 +145,17 @@
 			buildPhases = (
 				01B9E352B92B68F61794402A /* Sources */,
 				82E2EEC090017F2DB421BAAC /* Resources */,
-				AF11AE9967D461157F06A3D6 /* Embed Frameworks */,
 				B1174139154B2A01C79527CF /* Frameworks */,
+				AF11AE9967D461157F06A3D6 /* Embed Frameworks */,
+				556FDB7A96C8CED00DE2C5A3 /* Dependencies */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "yandex-promocode-tca";
+			packageProductDependencies = (
+			);
 			productName = yandex_promocode_tca;
 			productReference = C250D72B4F73C5D4687E28E2 /* yandex_promocode_tca.app */;
 			productType = "com.apple.product-type.application";
@@ -148,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDF789C87B35A5FDEF4982E7 /* swift-sharing_Sharing.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,10 +202,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1537608F2D771FD1005FC83C /* AppDelegate.swift in Sources */,
+				D47EDD4408BA702643457376 /* AppDelegate.swift in Sources */,
+				158E34712D785F2C00A3873E /* Environment.swift in Sources */,
+				F776E5FCB5864E5BEC4DC056 /* PromocodeService.swift in Sources */,
 				A2DFA28A7B6F8697EF48648A /* SceneDelegate.swift in Sources */,
-				153760912D7753F3005FC83C /* PromocodeService.swift in Sources */,
-				CA337928F0BF3480BB2AA498 /* ViewController.swift in Sources */,
+				158E346F2D78307B00A3873E /* Reducer.swift in Sources */,
+				158E34752D786C6700A3873E /* Action.swift in Sources */,
+				158E34732D786C5400A3873E /* State.swift in Sources */,
+				CA337928F0BF3480BB2AA498 /* PromocodesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,11 +222,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_PREVIEWS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Tuist/.build/checkouts/swift-navigation/Sources/UIKitNavigationShim/include",
+					"$(SRCROOT)/Tuist/.build/checkouts/swift-syntax/Sources/_SwiftSyntaxCShims/include",
+				);
 				INFOPLIST_FILE = "yandex-promocode-tca-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fmodule-map-file=$(SRCROOT)/Tuist/.build/checkouts/swift-syntax/Sources/_SwiftSyntaxCShims/include/module.modulemap",
+					"-fmodule-map-file=$(SRCROOT)/Tuist/.build/tuist-derived/UIKitNavigationShim/UIKitNavigationShim.modulemap",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/Tuist/.build/checkouts/swift-syntax/Sources/_SwiftSyntaxCShims/include/module.modulemap -Xcc -fmodule-map-file=$(SRCROOT)/Tuist/.build/tuist-derived/UIKitNavigationShim/UIKitNavigationShim.modulemap -load-plugin-executable $BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME/CasePathsMacros#CasePathsMacros -load-plugin-executable $BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME/ComposableArchitectureMacros#ComposableArchitectureMacros -load-plugin-executable $BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME/DependenciesMacrosPlugin#DependenciesMacrosPlugin -load-plugin-executable $BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME/PerceptionMacros#PerceptionMacros";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.tuist.yandex-promocode-tca";
 				PRODUCT_NAME = yandex_promocode_tca;
 				SDKROOT = iphoneos;
@@ -199,11 +258,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_PREVIEWS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Tuist/.build/checkouts/swift-navigation/Sources/UIKitNavigationShim/include",
+					"$(SRCROOT)/Tuist/.build/checkouts/swift-syntax/Sources/_SwiftSyntaxCShims/include",
+				);
 				INFOPLIST_FILE = "yandex-promocode-tca-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fmodule-map-file=$(SRCROOT)/Tuist/.build/checkouts/swift-syntax/Sources/_SwiftSyntaxCShims/include/module.modulemap",
+					"-fmodule-map-file=$(SRCROOT)/Tuist/.build/tuist-derived/UIKitNavigationShim/UIKitNavigationShim.modulemap",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/Tuist/.build/checkouts/swift-syntax/Sources/_SwiftSyntaxCShims/include/module.modulemap -Xcc -fmodule-map-file=$(SRCROOT)/Tuist/.build/tuist-derived/UIKitNavigationShim/UIKitNavigationShim.modulemap -load-plugin-executable $BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME/CasePathsMacros#CasePathsMacros -load-plugin-executable $BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME/ComposableArchitectureMacros#ComposableArchitectureMacros -load-plugin-executable $BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME/DependenciesMacrosPlugin#DependenciesMacrosPlugin -load-plugin-executable $BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME/PerceptionMacros#PerceptionMacros";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.tuist.yandex-promocode-tca";
 				PRODUCT_NAME = yandex_promocode_tca;
 				SDKROOT = iphoneos;

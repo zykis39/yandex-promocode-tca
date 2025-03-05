@@ -13,7 +13,7 @@ let project = Project(
             resources: ["yandex-promocode-tca/Resources/**"],
             dependencies: [
                 .external(name: "PinLayout"),
-//                .external(name: "swift-composable-architecture"),
+                .external(name: "ComposableArchitecture"),
             ]
         ),
     ]
