@@ -80,8 +80,10 @@ class PromocodesViewController: UIViewController {
         
         view.backgroundColor = s.backgroundColor
         promocodeLabel.text = props.selectedPromocode
+        promocodeLabel.textColor = s.promocodeTextColor
         
         titleLabel.text = props.title
+        titleLabel.textColor = s.titleTextColor
         titleLabel.textAlignment = s.titleTextAligment
         
         leftButton.setImage(.init(systemName: props.leftButtonIconSystemName), for: .normal)
@@ -97,7 +99,7 @@ class PromocodesViewController: UIViewController {
         rightButton.addTarget(self, action: #selector(onRightTapped), for: .touchUpInside)
         
         shareButton.setTitle(props.shareButtonTitle, for: .normal)
-        shareButton.setTitleColor(s.shareButtonTitleColor, for: .normal)
+        shareButton.setTitleColor(s.shareButtonTextColor, for: .normal)
         shareButton.backgroundColor = s.shareButtonBackgroundColor
         shareButton.addTarget(self, action: #selector(onShareTapped), for: .touchUpInside)
         
@@ -108,7 +110,7 @@ class PromocodesViewController: UIViewController {
         let m = props.metrics
         
         titleLabel.pin
-            .top(m.titleVMargin)
+            .top(m.titleVMargin + view.pin.safeArea.top)
             .horizontally(m.margins)
             .sizeToFit(.width)
         promocodeLabel.pin
@@ -124,9 +126,9 @@ class PromocodesViewController: UIViewController {
             .right(m.margins)
             .size(m.sideButtonSize)
         shareButton.pin
-            .bottom(m.margins)
+            .bottom(m.margins + view.pin.safeArea.bottom)
             .horizontally(m.margins)
-            .sizeToFit(.width)
+            .height(m.shareButtonHeight)
         
         shareButton.layer.cornerRadius = m.shareButtonCornerRadius
     }
@@ -174,25 +176,31 @@ extension PromocodesViewController {
         struct Metrics: Equatable {
             let margins: CGFloat
             let titleVMargin: CGFloat
+            let shareButtonHeight: CGFloat
             let shareButtonCornerRadius: CGFloat
             let sideButtonSize: CGFloat
             
             static let `default`: Self = .init(margins: 16,
                                                titleVMargin: 48,
+                                               shareButtonHeight: 54,
                                                shareButtonCornerRadius: 4,
-                                               sideButtonSize: 32)
+                                               sideButtonSize: 48)
         }
         
         struct Style: Equatable {
-            let titleTextAligment: NSTextAlignment
             let backgroundColor: UIColor
-            let shareButtonTitleColor: UIColor
+            let promocodeTextColor: UIColor
+            let titleTextColor: UIColor
+            let titleTextAligment: NSTextAlignment
+            let shareButtonTextColor: UIColor
             let shareButtonBackgroundColor: UIColor
             let sideButtonTintColor: UIColor
             
-            static let `default`: Self = .init(titleTextAligment: .center,
-                                               backgroundColor: .white,
-                                               shareButtonTitleColor: .black,
+            static let `default`: Self = .init(backgroundColor: .white,
+                                               promocodeTextColor: .black,
+                                               titleTextColor: .black,
+                                               titleTextAligment: .center,
+                                               shareButtonTextColor: .black,
                                                shareButtonBackgroundColor: UIColor(white: 0.95, alpha: 1.0),
                                                sideButtonTintColor: .lightGray)
         }
